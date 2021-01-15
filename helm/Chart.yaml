@@ -1,0 +1,4 @@
+apiVersion: v1
+description: Development environment
+name: development
+version: "1.0.0"
