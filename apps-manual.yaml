@@ -6,7 +6,7 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: production
+  project: develoment
   source:
     repoURL: https://github.com/darenjacobscellwize/argocd-development.git
     targetRevision: HEAD
