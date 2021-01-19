@@ -13,6 +13,7 @@ spec:
     targetRevision: HEAD
     helm:
       values: |
+        tag: base
   destination:
     namespace: development
     server: https://kubernetes.default.svc
