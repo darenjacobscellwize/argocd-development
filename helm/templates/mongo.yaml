@@ -1,22 +1,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: development
+  name: mongo
   namespace: argocd
   finalizers:
-    - resources-finalizer.argocd.argoproj.io
+  - resources-finalizer.argocd.argoproj.io
 spec:
   project: development
   source:
-    repoURL: https://github.com/darenjacobscellwize/argocd-development.git
+    repoURL: http://192.168.132.27/devops/helm-charts.git
+    path: charts/mongo
     targetRevision: HEAD
-    path: helm
+    helm:
+      values: |
   destination:
-    server: https://kubernetes.default.svc
     namespace: development
+    server: https://kubernetes.default.svc
   syncPolicy:
     automated:
       selfHeal: true
       prune: true
-    syncOptions:
-    - CreateNamespace=true

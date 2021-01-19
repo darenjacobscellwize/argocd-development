@@ -6,7 +6,7 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
-  project: default
+  project: development
   source:
     repoURL: http://192.168.132.27/devops/helm-charts.git
     path: charts/mysql
