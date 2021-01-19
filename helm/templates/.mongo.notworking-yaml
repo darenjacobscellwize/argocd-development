@@ -8,9 +8,9 @@ metadata:
 spec:
   project: development
   source:
-    repoURL: 192.168.132.145:5000
-    path: extras/mongo
-    targetRevision: base
+    repoURL: http://192.168.132.27/devops/helm-charts.git
+    path: charts/mongo
+    targetRevision: HEAD
     helm:
       values: |
   destination:
